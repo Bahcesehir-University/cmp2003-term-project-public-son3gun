@@ -6,12 +6,12 @@
 #include <unordered_map>
 
 struct ZoneCount {
-    string zone;
+    std::string zone;
     int count;
 };
 
 struct SlotCount {
-    string zone;
+    std::string zone;
     int hour;
     int count;
 };
@@ -24,12 +24,9 @@ public:
     std::vector<SlotCount> topBusySlots(int k = 10) const;
 
 private:
-    void processLine(const string& line);
-    unordered_map<string, int> zone_counts;
-    unordered_map<string, int> slot_counts;
+    void processLine(const std::string& line);
+    std::unordered_map<std::string, int> zone_counts;
+    std::unordered_map<std::string, int> slot_counts;
 };
 
 #endif
-
-
-
