@@ -20,8 +20,8 @@ class TripAnalyzer {
 public:
     void ingestFile(const std::string& csvPath);
     void ingestStdin();
-    vector<ZoneCount> topZones(int k = 10) const;
-    vector<SlotCount> topBusySlots(int k = 10) const;
+    std::vector<ZoneCount> topZones(int k = 10) const;
+    std::vector<SlotCount> topBusySlots(int k = 10) const;
 
 private:
     void processLine(const string& line);
@@ -30,5 +30,6 @@ private:
 };
 
 #endif
+
 
 
