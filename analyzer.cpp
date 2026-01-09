@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <sstream>
 #include <vector>
+#include <iostream>
 
 static std::string trim(const std::string& str) {
     size_t first = str.find_first_not_of(" \t\r\n");
@@ -151,5 +152,6 @@ std::vector<SlotCount> TripAnalyzer::topBusySlots(int k) const {
     if (result.size() > (size_t)k) result.resize(k);
     return result;
 }
+
 
 
